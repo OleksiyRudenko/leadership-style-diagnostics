@@ -46,11 +46,3 @@ function postToGoogleForm(){
     
   }
 }
-
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-  $('#formSubscribe').submit(function() {
-    postToGoogleForm();
-    return false;
-  });
-});
