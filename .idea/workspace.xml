@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d686fc3d-4ea9-4dc4-851e-5d41b4c58958" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/stylish-portfolio.css" afterPath="$PROJECT_DIR$/css/stylish-portfolio.css" />
     </list>
     <ignored path="leadership-style-diagnostics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -271,7 +270,7 @@
       <option name="presentableId" value="Default" />
       <updated>1467807672354</updated>
       <workItem from="1467807673875" duration="769000" />
-      <workItem from="1467808530130" duration="7395000" />
+      <workItem from="1467808530130" duration="7523000" />
     </task>
     <task id="LOCAL-00001" summary="Change Header section">
       <created>1467814183730</created>
@@ -308,11 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1467817152879</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Change Accented button text color">
+      <created>1467817239265</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1467817239265</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8164000" />
+    <option name="totallyTimeSpent" value="8292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -353,7 +359,8 @@
     <MESSAGE value="Change Header section" />
     <MESSAGE value="Finalize Header section" />
     <MESSAGE value="Add Modules section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Modules section" />
+    <MESSAGE value="Change Accented button text color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Accented button text color" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
