@@ -88,14 +88,14 @@ div.border-right {
 
 .btn-accent {
     border-radius: 3dppx;
-    color: #aaa;
+    color: #eee;
     background-color: rgb(255,51,0);
 }
 
 .btn-accent:hover,
 .btn-accent:focus,
 .btn-accent:active {
-    color: #aaa;
+    color: #fff;
     background-color: rgba(255,51,0,0.8);
 }
 
