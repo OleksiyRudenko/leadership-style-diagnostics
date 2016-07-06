@@ -17,8 +17,12 @@ function postContactToGoogle(){
     (validateEmail(email))
   ) {
     $.ajax({
-      url: "https://docs.google.com/yourFormURL/formResponse",
-      data: {"entry.1" : name, "entry.2" : email, "entry.3": telnr},
+      url: "https://docs.google.com/forms/d/1yB0ppw_TKTED8fRUzekz175zshRmomHKBzkeDibCZ2E/formResponse",
+      data: {
+        "entry.1582441788" : name,
+        "entry.1186358115" : email,
+        "entry.2042469105" : telnr
+      },
       type: "POST",
       dataType: "xml",
       statusCode: {
