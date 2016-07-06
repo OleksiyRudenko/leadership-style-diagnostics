@@ -246,6 +246,14 @@ hr.small {
     margin-bottom: 30px;
 }
 
+.portfolio-item h3 {           /** added OR */
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 100px;
+}
+
+
 .img-portfolio {
     margin: 0 auto;
 }
