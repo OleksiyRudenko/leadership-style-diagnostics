@@ -6,7 +6,7 @@ function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
-function postContactToGoogle(){
+function postToGoogleForm(){
   var name = $('#inputName').val();
   var email = $('#inputEmail').val();
   var telnr = $('#inputTelNr').val();
@@ -42,6 +42,14 @@ function postContactToGoogle(){
     });
   }
   else {
-    //Error message
+    // Validation error message
+    
   }
 }
+
+$(document).ready(function(){
+  $('#formSubscribe').submit(function() {
+    postToGoogleForm();
+    return false;
+  });
+});
