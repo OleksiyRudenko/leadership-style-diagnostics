@@ -56,6 +56,9 @@
                 <a href="#portfolio" onclick=$ ( "#menu-close").click();>Portfolio</a>
             </li>
             <li>
+                <a href="#subscribe" onclick=$ ( "#menu-close").click();>Регистрация</a>
+            </li>
+            <li>
                 <a href="#contact" onclick=$ ( "#menu-close").click();>Contact</a>
             </li>
         </ul>
@@ -75,25 +78,25 @@
                     <div class="col-xs-12 col-md-4"></div>
                 </div -->
                 <div class="row">
-                    <div class="col-xs-5 col-sm-5">
-                    </div>
-                    <div class="col-xs-5 col-sm-5 align-left">
+                    <!-- div class="col-xs-5 col-sm-5">
+                    </div -->
+                    <div class="col-xs-offset-5 col-xs-5 col-sm-offset-5 col-sm-5 align-left">
                         <h3 class="light">Воркшоп</h3>
                         <br/>
                         <br/>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-5 col-sm-5 border-right">
+                    <div class="col-xs-5 col-md-5 border-right">
                         <h1 class="light right-align">КАКИМ<br/>ЛИДЕРОМ</h1>
                     </div>
-                    <div class="col-xs-5 col-sm-5 align-left">
+                    <div class="col-xs-12 col-md-5 align-left">
                         <h2 class="light left-align">ты являешься?</h2>
                         <h2 class="light left-align">ты хочешь быть?</h2>
                         <br/>
                         <br/>
                         <a href="#modules" class="btn btn-light btn-lg">Подробнее</a>
-                        <a href="#" class="btn btn-lg btn-accent">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                        <a href="#subscribe" class="btn btn-lg btn-accent">ЗАРЕГИСТРИРОВАТЬСЯ</a>
                         <br/>
                         <br/>
                         <br/>
@@ -157,7 +160,7 @@
                     </div>
                     <!-- /.row (nested) -->
                     <!-- a href="#" class="btn btn-dark">View More Items</a -->
-                    <a href="#" class="btn btn-lg btn-accent">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                    <a href="#subscribe" class="btn btn-lg btn-accent">ЗАРЕГИСТРИРОВАТЬСЯ</a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -303,6 +306,60 @@
         </div>
     </aside>
 
+    <!-- Subscribe -->
+    <section id="subscribe" class="about">
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <h2>Регистрация на воркшоп</h2>
+                <hr class="small">
+            </div>
+            <!-- send data directly to a sheet associated with a google form -->
+            <!-- https://wiki.base22.com/pages/viewpage.action?pageId=72942000 -->
+            <form>
+                <div class="form-group row">
+                    <label for="inputName" class="col-sm-offset-4 col-sm-1 form-control-label">Имя</label>
+                    <div class="col-sm-3">
+                        <input id="inputName" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-offset-4 col-sm-1 form-control-label">Email</label>
+                    <div class="col-sm-3">
+                        <input id="inputEmail" type="email" class="form-control" placeholder="example@gmail.com" required="true">
+                    </div>
+                    <div class="col-sm-offset-5 col-sm-3">
+                        <small class="text-muted">Ваш имейл будет использован для сообщений, связанных только с этим воркшопом.</small>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputTelNr" class="col-sm-offset-4 col-sm-1 form-control-label">Телефон</label>
+                    <div class="col-sm-3">
+                        <input id="inputTelNr" type="text" class="form-control" placeholder="050 123 4567">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-offset-5 col-sm-3">
+                        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <!-- iframe
+                        src="https://docs.google.com/forms/d/1yB0ppw_TKTED8fRUzekz175zshRmomHKBzkeDibCZ2E/viewform?embedded=true"
+                        width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
+                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- TODO: Add some Call-out to feel the page -->
+
     <!-- Map -->
     <section id="contact" class="map">
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
@@ -312,7 +369,6 @@
         </small>
         </iframe>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
