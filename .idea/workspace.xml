@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d686fc3d-4ea9-4dc4-851e-5d41b4c58958" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/stylish-portfolio.css" afterPath="$PROJECT_DIR$/css/stylish-portfolio.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="leadership-style-diagnostics.iws" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="241" column="4" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
+            <state relative-caret-position="393">
+              <caret line="172" column="84" selection-start-line="172" selection-start-column="84" selection-end-line="172" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -272,7 +271,7 @@
       <option name="presentableId" value="Default" />
       <updated>1467807672354</updated>
       <workItem from="1467807673875" duration="769000" />
-      <workItem from="1467808530130" duration="6848000" />
+      <workItem from="1467808530130" duration="7319000" />
     </task>
     <task id="LOCAL-00001" summary="Change Header section">
       <created>1467814183730</created>
@@ -281,11 +280,32 @@
       <option name="project" value="LOCAL" />
       <updated>1467814183730</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finalize Header section">
+      <created>1467816692584</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1467816692584</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add Modules section">
+      <created>1467816793799</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1467816793799</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Modules section">
+      <created>1467817041746</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1467817041746</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7617000" />
+    <option name="totallyTimeSpent" value="8088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -321,8 +341,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Change Header section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Header section" />
+    <MESSAGE value="Finalize Header section" />
+    <MESSAGE value="Add Modules section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Modules section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -384,8 +408,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="241" column="4" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
+        <state relative-caret-position="393">
+          <caret line="172" column="84" selection-start-line="172" selection-start-column="84" selection-end-line="172" selection-end-column="84" />
           <folding />
         </state>
       </provider>
