@@ -33,7 +33,7 @@ h1.light, h2.light, h3.light {
     color: #eee;
 }
 
-/** customized O.R. */
+/** added O.R. */
 h1.right-align {
     text-align: right;
 }
@@ -42,10 +42,22 @@ h2.left-align {
     text-align: left;
 }
 
+div.border-right {
+    border-right: 3px dotted #eee;
+}
+
+.align-left {
+    text-align: left;
+}
+
+/** <<added O.R. */
+
 /* Custom Button Styles */
 
+/** amended O.R. */
+
 .btn-dark {
-    border-radius: 0;
+    border-radius: 3dppx;
     color: #fff;
     background-color: rgba(0,0,0,0.4);
 }
@@ -58,7 +70,7 @@ h2.left-align {
 }
 
 .btn-light {
-    border-radius: 0;
+    border-radius: 3dppx;
     color: #333;
     background-color: rgb(255,255,255);
 }
@@ -69,6 +81,25 @@ h2.left-align {
     color: #333;
     background-color: rgba(255,255,255,0.8);
 }
+
+/** <<amended O.R. */
+
+/** added O.R. */
+
+.btn-accent {
+    border-radius: 3dppx;
+    color: #aaa;
+    background-color: rgb(255,51,0);
+}
+
+.btn-accent:hover,
+.btn-accent:focus,
+.btn-accent:active {
+    color: #aaa;
+    background-color: rgba(255,51,0,0.8);
+}
+
+/** <<added O.R. */
 
 /* Custom Horizontal Rule */
 
