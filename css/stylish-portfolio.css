@@ -50,6 +50,12 @@ div.border-right {
     text-align: left;
 }
 
+.form-group.required .form-control-label:after {
+    content: " *";
+    font-size: 110%;
+    color: Red;
+}
+
 /** <<added O.R. */
 
 /* Custom Button Styles */
