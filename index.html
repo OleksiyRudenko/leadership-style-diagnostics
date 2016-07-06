@@ -27,8 +27,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="js/postcontact.js"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -316,6 +315,9 @@
             </div>
             <!-- send data directly to a sheet associated with a google form -->
             <!-- https://wiki.base22.com/pages/viewpage.action?pageId=72942000 -->
+            <!-- see also http://www.blogxpertise.com/2011/11/tip-adding-submission-form-to-your-blog.html
+                 to overcome CORS policy
+             -->
             <form id="formSubscribe" target="_self" onsubmit="" action="">
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-offset-4 col-sm-1 lead form-control-label">Имя</label>
@@ -497,6 +499,7 @@
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
+    <script src="js/postcontact.js"></script>
 
 </body>
 
