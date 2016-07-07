@@ -284,6 +284,8 @@
                     <!-- a href="#" class="btn btn-dark">View More Items</a -->
                     <a href="#location" class="btn btn-dark btn-lg">Где, когда...
                         <i class="fa fa-angle-down fa-fw fa-1x"></i></a>
+                    <a href="#subscribe" class="btn btn-lg btn-accent">ЗАРЕГИСТРИРОВАТЬСЯ
+                        <i class="fa fa-angle-double-down fa-fw fa-1x"></i></a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -291,6 +293,15 @@
         </div>
         <!-- /.container -->
     </section>
+    <!-- Callout -->
+    <a href="#location">
+    <aside class="calloutBonusModules">
+        <div class="cold-xs-12 text-vertical-center">
+            <h1>+ ответы на почти все вопросы</h1>
+        </div>
+    </aside>
+    </a>
+
 
     <!-- Location and time -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -340,6 +351,15 @@
                         </div>
                     </div>
                     <!-- /.row (nested) -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br />
+                            <a href="#location" class="btn btn-light btn-lg">Об авторе
+                                <i class="fa fa-angle-down fa-fw fa-1x"></i></a>
+                            <a href="#subscribe" class="btn btn-lg btn-accent">ЗАРЕГИСТРИРОВАТЬСЯ
+                                <i class="fa fa-angle-double-down fa-fw fa-1x"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -348,7 +368,16 @@
         <!-- /.container -->
     </section>
     <section id="map" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        <!-- script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+        <div style='overflow:hidden;height:440px;width:1380px;'>
+            <div id='gmap_canvas' style='height:440px;width:1380px;'></div>
+            <div>
+                <small><a href="http://embedgooglemaps.com">									embed google maps							</a></small>
+            </div>
+            <div><small><a href="https://termsofusegenerator.net">terms of use example</a></small></div>
+            <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+        </div -->
+        <!-- iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                 src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"
         ></iframe>
         <br />
@@ -356,7 +385,11 @@
             <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"
             ></a>
         </small>
-        </iframe>
+        </iframe -->
+
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.0923718658023!2d30.514159372383045!3d50.43351760448043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x992722a4e44406fa!2z0JrQuNGX0LLRgdGM0LrQuNC5INC90LDRhtGW0L7QvdCw0LvRjNC90LjQuSDQsNC60LDQtNC10LzRltGH0L3QuNC5INGC0LXQsNGC0YAg0L7Qv9C10YDQtdGC0Lg!5e0!3m2!1sen!2sua!4v1467919404272"
+                width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border:0"></iframe>
     </section>
 
     <!-- Callout -->
@@ -439,6 +472,15 @@
                  to overcome CORS policy
              -->
             <form id="formSubscribe" target="_self" onsubmit="" action="">
+                <div class="form-group row">
+                    <div class="col-sm-offset-5 col-sm-3">
+                        <small class="text-muted">Темы, которые вы выбрали выше, также будут переданы с нажатием кнопки регистрации.</small>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#bonusModules" class="btn btn-dark">Посмотреть
+                            <i class="fa fa-angle-up fa-fw fa-1x"></i></a>
+                    </div>
+                </div>
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-offset-4 col-sm-1 lead form-control-label">Имя</label>
                     <div class="col-sm-3">
