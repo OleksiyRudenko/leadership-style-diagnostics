@@ -53,6 +53,9 @@
                 <a href="#modules" onclick=$ ( "#menu-close").click();>Модули</a>
             </li>
             <li>
+                <a href="#bonusModules" onclick=$ ( "#menu-close").click();>Бонус-темы</a>
+            </li>
+            <li>
                 <a href="#location" onclick=$ ( "#menu-close").click();>Где и когда</a>
             </li>
             <li>
@@ -101,8 +104,10 @@
                         <h2 class="light left-align">ты хочешь быть?</h2>
                         <br/>
                         <br/>
-                        <a href="#audience" class="btn btn-light btn-lg">Подробнее</a>
-                        <a href="#subscribe" class="btn btn-lg btn-accent">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                        <a href="#audience" class="btn btn-light btn-lg">Подробнее
+                            <i class="fa fa-angle-down fa-fw fa-1x"></i></a>
+                        <a href="#subscribe" class="btn btn-lg btn-accent">ЗАРЕГИСТРИРОВАТЬСЯ
+                            <i class="fa fa-angle-double-down fa-fw fa-1x"></i></a>
                         <br/>
                         <br/>
                         <br/>
@@ -134,7 +139,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <br />
-                            <a href="#modules" class="btn btn-light btn-lg">Дальше > МОДУЛИ...</a>
+                            <a href="#modules" class="btn btn-light btn-lg">Модули
+                                <i class="fa fa-angle-down fa-fw fa-1x"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -143,8 +150,7 @@
     </section>
 
     <!-- Modules -->
-    <section id="modules" class="portfolio">
-        <!-- TODO: make pictures 1/3 height less to fit single screen -->
+    <section id="modules" class="module">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -152,41 +158,132 @@
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                                <h3>Классификации</h3>
+                            <div class="module-item tint">
+                                <img class="module-img img-responsive tint" src="img/module-1.png">
+                                <div><h2>Классификации</h2></div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                                <h3>Самодиагностика</h3>
+                            <div class="module-item tint">
+                                <img class="module-img img-responsive tint" src="img/module-2.png">
+                                <div>
+                                    <h2>Самодиагностика</h2>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                                <h3>Куда и как двигаться дальше?</h3>
+                            <div class="module-item tint">
+                                <img class="module-img img-responsive" src="img/module-3.png">
+                                <div><h2>Куда и как двигаться дальше?</h2></div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                                <h3>Управленческие лайфхаки</h3>
+                            <div class="module-item tint">
+                                <img class="module-img img-responsive" src="img/module-4.png">
+                                <div>
+                                    <h2>Управленческий лайфхак</h2>
+                                    (на выбор участников)
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
                     <!-- a href="#" class="btn btn-dark">View More Items</a -->
-                    <a href="#location" class="btn btn-dark btn-lg">Дальше > ГДЕ, КОГДА...</a>
+                    <a href="#bonusModules" class="btn btn-dark btn-lg">Ещё
+                        <i class="fa fa-angle-down fa-fw fa-1x"></i></a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- BonusModules -->
+    <section id="bonusModules" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Управленческий лайфхак на ваш выбор</h2>
+                    <hr class="small">
+                    <p class="lead">Отметьте, пожалуйста, до трёх наиболее интересных тем</p>
+                    <div class="row">
+                        <div class="col-md-6 align-left">
+                            <p class="lead">
+                                <input type="checkbox" id="bonusModule01">
+                                <label for="bonusModule01" class="align-left checkbox-wrapped-label">
+                                    Сендвич-менеджер - между боссом и подчинёнными
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-6 align-left">
+                            <p class="lead">
+                                <input type="checkbox" id="bonusModule02">
+                                <label for="bonusModule02" class="align-left checkbox-wrapped-label">
+                                    От миссии компании к индивидуальным целям
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-6 align-left">
+                            <p class="lead">
+                                <input type="checkbox" id="bonusModule04">
+                                <label for="bonusModule04" class="align-left checkbox-wrapped-label">
+                                    IQ против EQ. TQ, MQ, BQ и другие Q
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-6 align-left">
+                            <p class="lead">
+                                <input type="checkbox" id="bonusModule05">
+                                <label for="bonusModule05" class="align-left checkbox-wrapped-label">
+                                    Как правильно увольнять сотрудников
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-6 align-left">
+                            <p class="lead">
+                                <input type="checkbox" id="bonusModule03">
+                                <label for="bonusModule03" class="align-left checkbox-wrapped-label">
+                                    Как сделать совещание интересным и полезным
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-6 align-left">
+                            <p class="lead">
+                                <input type="checkbox" id="bonusModule06">
+                                <label for="bonusModule06" class="align-left checkbox-wrapped-label">
+                                    Как правильно решать конфликты между сотрудниками
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-6 align-left">
+                            <p class="lead">
+                                <input type="checkbox" id="bonusModule07">
+                                <label for="bonusModule07" class="align-left checkbox-wrapped-label">
+                                    Канбан - малая механизация проектов
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-6 align-left">
+                            <p class="lead">
+                                <input type="checkbox" id="bonusModule08">
+                                <label for="bonusModule08" class="align-left checkbox-wrapped-label">
+                                    Ролевые вакансии в команде
+                                </label>
+                            </p>
+                        </div>
+
+                        <!-- h3>Мотивация против KPI и вознаграждения</h3>
+                            <h3>Управленческий цикл: идея-решение-внедрение</h3>
+                        <h3>Массовый найм</h3>
+                        <h3>Диалектика манипуляции людьми</h3>
+                        <h3>Процессы против проектов</h3 -->
+
+                    </div>
+                    <!-- /.row (nested) -->
+                    <!-- a href="#" class="btn btn-dark">View More Items</a -->
+                    <a href="#location" class="btn btn-dark btn-lg">Где, когда...
+                        <i class="fa fa-angle-down fa-fw fa-1x"></i></a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>

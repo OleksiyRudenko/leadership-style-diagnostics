@@ -4,6 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 /* Global Styles */
 
 html,
@@ -108,6 +110,31 @@ div.border-right {
     color: #fff;
     background-color: rgba(255,51,0,0.8);
 }
+
+.btn-wrapped {
+    white-space:normal !important;
+}
+
+.checkbox-wrapped-label {
+    /* padding-left:   20px; */
+    padding-left:  2em;
+    text-indent:  -2ex;
+    word-wrap:      break-word;
+}
+
+/* checkboxes. src: https://codepen.io/jamesbarnett/pen/yILjk/ */
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
 
 /** <<added O.R. */
 
@@ -253,6 +280,59 @@ hr.small {
     -o-background-size: cover;
 }
 
+/* Modules */  /** added OR */
+
+.module {
+    padding: 50px 0;
+}
+
+.module-item {
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.module-item div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 100px;
+}
+
+.module-img {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.6;
+}
+
+.tint { /* shadow */
+    position: relative;
+    float: left;
+    /* margin-right: 20px;
+    margin-bottom: 20px; */
+    /* cursor: pointer; */
+    box-shadow: rgba(0,0,0,.2) 0px 0px 0px;
+}
+
+.tint:before { /* tinter */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, 0.8);
+    /* transition: all .3s linear; */
+}
+
+/* .tint:hover:before { background: none; } */
+
+
+/* .module-img:hover {
+    opacity: 0.8;
+} */
+
+
 /* Portfolio */
 
 .portfolio {
@@ -263,13 +343,12 @@ hr.small {
     margin-bottom: 30px;
 }
 
-.portfolio-item h3 {           /** added OR */
+.portfolio-item div {
     position: absolute;
     width: 100%;
     text-align: center;
     top: 100px;
 }
-
 
 .img-portfolio {
     margin: 0 auto;
