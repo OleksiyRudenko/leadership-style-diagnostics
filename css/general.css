@@ -119,7 +119,7 @@ div.border-right {
     /* padding-left:   20px; */
     padding-left:  2em;
     text-indent:  -2ex;
-    word-wrap:      break-word;
+    word-wrap:    break-word;
 }
 
 /* checkboxes. src: https://codepen.io/jamesbarnett/pen/yILjk/ */
@@ -128,13 +128,14 @@ input[type=checkbox] { display:none; } /* to hide the checkbox itself */
 input[type=checkbox] + label:before {
     font-family: FontAwesome;
     display: inline-block;
+    color: blue;
 }
 
 input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
-input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+input[type=checkbox] + label:before { letter-spacing: 1.8ex; } /* space between checkbox and label */
 
 input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
-input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
+input[type=checkbox]:checked + label:before { letter-spacing: 1.5ex; } /* allow space for check mark */
 
 /** <<added O.R. */
 
