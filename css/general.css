@@ -305,11 +305,13 @@ hr.small {
     color: #fff;
 }
 
-.module-item div {
+.module-item div.text-overlay {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 100px;
+    padding-left: 1em;
+    padding-right: 1em;
+    top: 1ex;
 }
 
 .module-img {
@@ -335,7 +337,7 @@ hr.small {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0, 0.8);
+    background: rgba(0,0,0, 0.9);
     /* transition: all .3s linear; */
 }
 
