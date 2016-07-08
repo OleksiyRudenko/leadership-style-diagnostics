@@ -47,7 +47,7 @@ Provides access to back-end: analysis, actions.
  * email
  * isConfirmed
  * isSubscribed
- * isSpeaker
+ * unsubscribeToken
 
 **Venue**
  * name
@@ -109,6 +109,14 @@ Actual minimum revenue from an attendee =
  * isBalanceAligned -- _goto SendTicket()_
  * dateTicketSent
 
+**Token**
+ * *Attendee
+ * *Workshop
+ * token
+ * forAction
+ * isUsed
+
+
 ## Business Logic
 
 ### Public: Attendee Related Behaviour
@@ -155,7 +163,8 @@ On actionContactMe
 
 ```
 Initialization config
-    WorkshopId = ? // also sent along with user submissions
+    WorkshopId = ? // also submitted along with user submissions
+    ReferralCode = ? // extracted from url and submitted along with user submissions
 
 Initialization from back-end data
     sectionLocation.*
