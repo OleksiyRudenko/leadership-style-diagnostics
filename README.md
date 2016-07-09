@@ -134,8 +134,8 @@ on actionUpdateMyData-or-RegisterAnotherAttendee {
     }
 
 sectionBonusModules.show = isSetCookie(registered)
-    ? CheckboxesOff
-    : CheckboxesOn
+    ? CheckboxesHide
+    : CheckboxesShow
 
 sectionSubscription.show = isSetCookie(registered)
     ? ThankYou + bttnCallToAction + bttnContactMe
