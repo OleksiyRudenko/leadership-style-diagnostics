@@ -31,10 +31,13 @@ Sections:
  * Author
  * Subscription / Registration
 
+[**[back-to-top](#table-of-contents)**]
+
 ### Management Page
 
 Provides access to back-end: analysis, actions.
 
+[**[back-to-top](#table-of-contents)**]
 
 ## Data Model
 
@@ -115,6 +118,7 @@ Actual minimum revenue from an attendee =
  * forAction
  * isUsed
 
+[**[back-to-top](#table-of-contents)**]
 
 ## Business Logic
 
@@ -158,6 +162,8 @@ On actionContactMe
         We shall contact you by email first
 ```
 
+[**[back-to-top](#table-of-contents)**]
+
 ### Public: Back-End Data Related Behaviour
 
 ```
@@ -183,9 +189,12 @@ On actionSubscribeForNextEvent
         BTW, we have already ... pax subscribed for the next workshop.
 ```
 
+[**[back-to-top](#table-of-contents)**]
+
 ### Private: Management
 
 
+[**[back-to-top](#table-of-contents)**]
 
 # Credits
 
@@ -205,3 +214,5 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 # This Implementation Copyright and License
 
 Copyright 2016 Oleksiy Rudenko. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/gh-pages/LICENSE) license.
+
+[**[back-to-top](#table-of-contents)**]
