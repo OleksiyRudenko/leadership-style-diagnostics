@@ -349,6 +349,23 @@ hr.small {
 } */
 
 
+/* Speakers -- based on Portfolio */
+
+.speaker {
+    padding: 50px 0;
+}
+
+.speaker-item {
+    margin-bottom: 30px;
+}
+
+.img-speaker {
+    margin: 0 auto;
+    width: 30%;
+    max-width: 150px;
+}
+
+
 /* Portfolio */
 
 .portfolio {
