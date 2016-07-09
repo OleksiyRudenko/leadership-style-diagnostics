@@ -15,8 +15,7 @@ A Landing Page template for a workshop.
     1. [Public: Back-End Data Related Behaviour](#public-back-end-data-related-behaviour)
     1. [Private: Management](#private-management)
 
-
-## Sructure
+## Structure
 
 ### Public Page
 
