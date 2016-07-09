@@ -35,6 +35,10 @@ h1.light, h2.light, h3.light {
     color: #eee;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 /** added O.R. */
 h1.right-align {
     text-align: right;
@@ -61,6 +65,15 @@ div.border-right {
     font-size: 110%;
     color: Red;
 }
+
+.glow-white {
+    text-shadow: 0 0 0.2ex #fff;
+}
+
+.glow-black {
+    text-shadow: 0 0 0.2ex #000;
+}
+
 
 /** <<added O.R. */
 
