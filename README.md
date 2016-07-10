@@ -5,7 +5,9 @@
 A Landing Page template for a workshop.
 
 ## Table of Contents
-1. [Structure](#structure)
+
+1. [The Process](#the-process)
+1. [Application Structure](#application-structure)
     1. [Public Page](#public-page)
     1. [Management Page](#management-page)
 1. [Data Model](#data-model)
@@ -15,7 +17,12 @@ A Landing Page template for a workshop.
     1. [Public: Back-End Data Related Behaviour](#public-back-end-data-related-behaviour)
     1. [Private: Management](#private-management)
 
-## Structure
+## The Process
+
+
+[**[back-to-top](#table-of-contents)**]
+
+## Application Structure
 
 ### Public Page
 
