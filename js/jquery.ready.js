@@ -21,12 +21,17 @@ $(document).ready(function(){
       postToGoogleForm();
       return false;
     });
-    // email embedder
+    // email & tel protection
     $(function(){
       setTimeout(function(){
         var m = ['com','.','gmail','@','rudenko','.','oleksiy'].reverse().join('');
         $('#speakerEmail').prop('href','mailto'+':'+m).text(m);
+
+        var thr = ['5758','440','50','+380'].reverse().join(' ');
+        var txt = ['5758','440','(050)','+38'].reverse().join(' ');
+        $('#speakerTel').prop('href','tel'+':'+thr).text(txt);
       },1000);
+
 
     });
   });
