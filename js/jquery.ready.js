@@ -21,6 +21,14 @@ $(document).ready(function(){
       postToGoogleForm();
       return false;
     });
+    // email embedder
+    $(function(){
+      setTimeout(function(){
+        var m = ['com','.','gmail','@','rudenko','.','oleksiy'].reverse().join('');
+        $('#speakerEmail').prop('href','mailto'+':'+m).text(m);
+      },1000);
+
+    });
   });
   // The rest of the code goes here!
 }(window.jQuery, window, document));
