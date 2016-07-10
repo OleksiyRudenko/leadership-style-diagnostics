@@ -19,6 +19,71 @@ A Landing Page template for a workshop.
 
 ## The Process
 
+### Overview
+
+One may want to run a recurring 
+
+[**[back-to-top](#table-of-contents)**]
+
+### Definitions
+
+**Individual**
+
+In global context:
+ * Attendee - prospect
+ * Refugee - explicitly rejected any further communications; reset when registers to any Event
+ * Speaker - speaker
+ * Host - hosts events
+ * Admin to a Host - administrates events
+
+In context of Event:
+ * Invitee - invited by host to visit landing page/registration
+ * Subscriber - subscribed for event launch notice
+ * Registered - registered while not paid yet
+ * Attendee - admittance paid
+ * Graduate - attended event
+ * Rejector - rejected further notices at any stage. Reasons stored.
+ 
+`U` - absolute required minimum count(Attendees)
+`X` - last call threshhold
+`Y` - optimal count(Attendees)
+`Z` - maximum count(Attendees)
+
+[**[back-to-top](#table-of-contents)**]
+
+### Conceptual Workflow Model
+
+* Initialization
+    - Define Host, Admin
+    - Define re Event: topic and components, location(city), duration, {`U`, `X`, `Y`, `Z`}
+    - Add Invitees to the Event context
+    
+* Reveal interest
+    - Define
+    - Make a landing page (cover, targeting, modules, extras, testimonials/gallery, {when,where,seats,price}.proposed, author, subscribe.survey)
+        - Survey: contacts (name, email, telephone, city), checkbox (would attend in my city), date options
+        - Survey form pre-populated with data from cookies/browser-input-history/email-url/DB
+        - If user is Subscriber then subscribe.surveyNotice = thank you; click if you want to change anything -> subscribe.survey; share
+        - On submission: Invitee => Subscriber
+    - Email invitations: url+clientid, offer to discontinue further mails on this event / global
+    - Collect Subscribers
+        - email confirmation: thank you, on city-mismatch -> offer to discontinue further emails on this event due to city mismatch
+        - notify Host
+        
+* Promo Campaign
+    
+
+[**[back-to-top](#table-of-contents)**]
+
+### Pricing
+
+```
+ Costs = Venue costs + Materials costs + Travel Costs
+ 
+ ReferralLimit = ?     // 
+ ReferralRefund[] =
+ 
+```
 
 [**[back-to-top](#table-of-contents)**]
 
