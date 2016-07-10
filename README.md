@@ -44,7 +44,7 @@ In context of Event:
  * Graduate - attended event
  * Rejector - rejected further notices at any stage. Reasons stored.
  
-`U` - absolute required minimum count(Attendees)
+`W` - absolute required minimum count(Attendees)
 `X` - last call threshhold
 `Y` - optimal count(Attendees)
 `Z` - maximum count(Attendees)
@@ -55,7 +55,7 @@ In context of Event:
 
 * Initialization
     - Define Host, Admin
-    - Define re Event: topic and components, location(city), duration, {`U`, `X`, `Y`, `Z`}
+    - Define re Event: topic and components, location(city), duration, {`W`, `X`, `Y`, `Z`}
     - Add Invitees to the Event context
     
 * Reveal interest
@@ -65,6 +65,7 @@ In context of Event:
         - Survey form pre-populated with data from cookies/browser-input-history/email-url/DB
         - If user is Subscriber then subscribe.surveyNotice = thank you; click if you want to change anything -> subscribe.survey; share
         - On submission: Invitee => Subscriber
+    - Publish on social networks / venues sites 
     - Email invitations: url+clientid, offer to discontinue further mails on this event / global
     - Collect Subscribers
         - email confirmation: thank you, on city-mismatch -> offer to discontinue further emails on this event due to city mismatch
@@ -77,13 +78,35 @@ In context of Event:
 
 ### Pricing
 
+Sales stages: EarlyBird, Normal, Late, OnSite
+
 ```
  Costs = Venue costs + Materials costs + Travel Costs
+ MinimalProfit = ?      // minimal profit to earn
  
- ReferralLimit = ?     // 
- ReferralRefund[] =
+ ReferralsLimit = ?     // how many refunds provided as a maximum
+ ReferralRefund[] = ?   // refund per referral per sales stage (decreases from stage to stage)
+ ReferralDiscount[] = ? // discount provided by reference code per sales stage (decreases from stage to stage)
+ // See Event entity specification below for details
  
+ TicketMinimumPrice = (Costs + MinimalProfit) / U + ReferralDiscount[EarlyBird] + ReferralRefund[EarlyBird] * ReferralsLimit
+  
+ Example:
+        Costs = 2500
+        MinimalProfit = 500
+        U = 15
+        ReferralsLimit = 3
+        ReferralRefund[EarlyBird] = 50
+        ReferralDiscount[EarlyBird] = 50
+    TicketMinumumPrice = (2500 + 500) / 15 + 50 + 50 * 3 = 400
+     
 ```
+
+Offer discount vouchers on Normal and Late stages only. Then `TicketPrice[Normal]`>=`TicketPrice[EarlyBird]`
+
+Event Promotion Management fees options:
+ 1. We take money from Attendees between `W` and `Y` + 70% of ticket price difference until `Z`
+ 2. Fixed fee (included into Event costs) + 70% of ticket price difference from between `Y` and `Z`
 
 [**[back-to-top](#table-of-contents)**]
 
@@ -134,7 +157,7 @@ Provides access to back-end: analysis, actions.
  * price8h
  * datePriceAsOf
 
-**Workshop**
+**Event**
  * title
  * dateOn
  * timeStart
@@ -144,19 +167,19 @@ Provides access to back-end: analysis, actions.
  * *Venue
  * capacityTotal
  * capacityLastCall -- _equals `capacityTotal*0.9` or `capacityTotal-3`_
- * attendee-FriendsDiscountLimit
+ * attendee-ReferralsLimit
  * attendee-EarlyBird-Until
  * attendee-EarlyBird-Price
+ * attendee-EarlyBird-ReferralRefund
  * attendee-EarlyBird-ReferralDiscount
- * attendee-EarlyBird-FriendDiscount
- * attendee-Basic-Until
- * attendee-Basic-Price
- * attendee-Basic-ReferralDiscount -- _must be lesser than for previous stage_
- * attendee-Basic-FriendDiscount
+ * attendee-Normal-Until
+ * attendee-Normal-Price
+ * attendee-Normal-ReferralRefund -- _must be lesser than for previous stage_
+ * attendee-Normal-ReferralDiscount -- _must be lesser than for previous stage_
  * attendee-Late-Until
  * attendee-Late-Price
+ * attendee-Late-ReferralRefund -- _must be even lesser than for previous stage_
  * attendee-Late-ReferralDiscount -- _must be even lesser than for previous stage_
- * attendee-Late-FriendDiscount
  * attendee-OnSite-Price
  * extraSubscribers -- _calculate overVacancies to tell people how many are willing to attend next event_
 
