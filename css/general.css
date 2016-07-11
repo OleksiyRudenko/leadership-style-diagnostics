@@ -5,6 +5,7 @@
  */
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 
 /* Global Styles */
 
@@ -15,7 +16,8 @@ body {
 }
 
 body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif; */
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .text-vertical-center {
