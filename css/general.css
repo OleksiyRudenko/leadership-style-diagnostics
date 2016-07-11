@@ -83,6 +83,10 @@ div.border-right {
 
 /** amended O.R. */
 
+.btn {
+    margin-bottom: 0.3ex;
+}
+
 .btn-dark {
     border-radius: 3dppx;
     color: #fff;
