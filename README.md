@@ -84,7 +84,6 @@ In context of Event:
     - On Register
         - Invitee|Subscriber => Registered: payment instructions, contactMe, referral-code promise
         - Other: you've been registered already
-        
     - Collect payments
         - Registered => Attendee: thankyou, ticket, referral-code + share
     - On `X`
@@ -93,6 +92,12 @@ In context of Event:
     - On day salesNormal-2 (two days of EarlyBird yet)
     - On day salesLate-2
     - On day D-2
+* Event at Risk
+* Cancel As `U` Not Achieved
+* No vacancies
+* D-Day
+* PostEvent
+
     
     
 Email actions:
