@@ -54,57 +54,64 @@ In context of Event:
 
 ### Conceptual Workflow Model
 
-* Initialization
-    - Define Host, Admin
-    - Define re Event: topic and components, location(city), duration, 
-        {`W`, `X`, `Y`, `Z`}, external resources (web-site, page on social network)
-    - Add Invitees to the Event context
-* Reveal interest
-    - Define
-    - Make a landing page (cover, targeting, modules, extras, testimonials/gallery, 
-        {when,where,seats,price}.proposed, author, subscribe = subscribe.survey|surveyNotice)
-        - Survey: contacts (name, email, telephone, city), checkbox (would attend in my city), date options
-        - Survey form pre-populated with data from cookies/browser-input-history/email-url/DB
-        - If user is Subscriber then subscribe.surveyNotice = thank you; click if you want to 
-            change anything -> subscribe.survey; share
-        - On submission: Invitee => Subscriber
-    - Publish on social networks / venues sites 
-    - Email invitations: url+clientid, discontinueThis, discontinueAll
-    - Collect Subscribers
-        - email confirmation: thank you, on city-mismatch -> discontinueThisCity
-        - notify Host
-* Promo Campaign
-    - Define re Event: date and time, location, prices
-    - Create event notices on social networks / venues sites
-    - Update Landing Page: ... refs to public events, subscribe = subscribe.register
-        - If isRegistered then subscribe = subscribe.registerNotice (amend, register another attendee)
-    - On launch day:
-        - Invitees:: Email invitations: details, prices, url+clientid, discontinueThis, discontinueThisCity, discontinueAll
-        - Subscribers:: Email good news: details, prices, url+clientid, remindLater, discontinueThis, discontinueAll
-    - On Register
-        - Invitee|Subscriber => Registered: payment instructions, contactMe, referral-code promise
-        - Other: you've been registered already
-    - Collect payments
-        - Registered => Attendee: thankyou, ticket, referral-code + share
-    - On `X`
-    - On `Y`
-    - On `Z`
-    - On day salesNormal-2 (two days of EarlyBird yet)
-    - On day salesLate-2
-    - On day D-2
-* Event at Risk
-* Cancel As `U` Not Achieved
-* No vacancies
-* D-Day
-* PostEvent
+#### Initialization
+- Define Host, Admin
+- Define re Event: topic and components, location(city), duration, 
+    {`W`, `X`, `Y`, `Z`}, external resources (web-site, page on social network)
+- Add Invitees to the Event context
+    
+#### Reveal interest
+
+- Define
+- Make a landing page (cover, targeting, modules, extras, testimonials/gallery, 
+    {when,where,seats,price}.proposed, author, subscribe = subscribe.survey|surveyNotice)
+    - Survey: contacts (name, email, telephone, city), checkbox (would attend in my city), date options
+    - Survey form pre-populated with data from cookies/browser-input-history/email-url/DB
+    - If user is Subscriber then subscribe.surveyNotice = thank you; click if you want to 
+        change anything -> subscribe.survey; share
+    - On submission: Invitee => Subscriber
+- Publish on social networks / venues sites 
+- Email invitations: url+clientid, discontinueThis, discontinueAll
+- Collect Subscribers
+    - email confirmation: thank you, on city-mismatch -> discontinueThisCity
+    - notify Host
+    
+#### Promo Campaign
+- Define re Event: date and time, location, prices
+- Create event notices on social networks / venues sites
+- Update Landing Page: ... refs to public events, subscribe = subscribe.register
+    - If isRegistered then subscribe = subscribe.registerNotice (amend, register another attendee)
+- On launch day:
+    - Invitees:: Email invitations: details, prices, url+clientid, discontinueThis, discontinueThisCity, discontinueAll
+    - Subscribers:: Email good news: details, prices, url+clientid, remindLater, discontinueThis, discontinueAll
+- On Register
+    - Invitee|Subscriber => Registered: payment instructions, contactMe, referral-code promise
+    - Other: you've been registered already
+- Collect payments
+    - Registered => Attendee: thankyou, ticket, referral-code + share
+- On `X`
+- On `Y`
+- On `Z`
+- On day salesNormal-2 (two days of EarlyBird yet)
+- On day salesLate-2
+- On day D-2
+
+#### Event at Risk
+
+#### Cancel As `U` Not Achieved
+
+#### No vacancies
+
+#### D-Day
+
+#### PostEvent
 
     
-    
-Email actions:
-    - discontinueThis - discontinue further emails on this event
-    - discontinueThisCity - as above but for a city mismatch reason 
-    - discontinueAll - discontinue all similar emails 
-    - remindLater - remind later
+#### Appendix: Email Actions Reference
+- discontinueThis = discontinue further emails on this event
+- discontinueThisCity = as above but for a city mismatch reason 
+- discontinueAll = discontinue all similar emails 
+- remindLater = remind later
     
 
 [**[back-to-top](#table-of-contents)**]
