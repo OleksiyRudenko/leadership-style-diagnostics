@@ -50,9 +50,22 @@ In context of Event:
 `Y` - optimal count(Attendees)
 `Z` - maximum count(Attendees)
 
+**Day D** - Day of Event
+
 [**[back-to-top](#table-of-contents)**]
 
 ### Conceptual Workflow Model
+
+Phases:
+ * Initialization
+ * Survey - reveal interest if any
+ * Sales Campaign
+ * Sales Boost - invoked when sales progress is poor
+ * Postponement - invoked when sales target achievable but more time required
+ * Cancellation - invoked when sales target obviously cannot be achieved in reasonable time scope
+ * Sales Closed - invoked when sales target achieved before day D
+ * D-Day - on day D
+ * PostEvent - on day after day D
 
 #### Initialization
 - Define Host, Admin
@@ -60,7 +73,7 @@ In context of Event:
     {`W`, `X`, `Y`, `Z`}, external resources (web-site, page on social network)
 - Add Invitees to the Event context
     
-#### Reveal interest
+#### Survey
 - Define
 - Make a landing page (cover, targeting, modules, extras, testimonials/gallery, 
     {when,where,seats,price}.proposed, author, subscribe = subscribe.survey|surveyNotice)
@@ -75,7 +88,7 @@ In context of Event:
     - email confirmation: thank you, on city-mismatch -> discontinueThisCity
     - notify Host
     
-#### Promo Campaign
+#### Sales Campaign
 - Define re Event: date and time, location, prices
 - Create event notices on social networks / venues sites
 - Update Landing Page: ... refs to public events, subscribe = subscribe.register
@@ -95,13 +108,13 @@ In context of Event:
 - On day salesLate-2
 - On day D-2
 
-#### Event at Risk - Offer Discounts
+#### Sales Boost
 
-#### `U` Not Achieved - Postpone
+#### Postponement
 
-#### `U` Not Achieved - Cancel
+#### Cancellation
 
-#### No More Vacancies
+#### Sales Closed
 
 #### D-Day
 
