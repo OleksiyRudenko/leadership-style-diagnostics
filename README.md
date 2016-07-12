@@ -7,6 +7,9 @@ A Landing Page template for a workshop.
 ## Table of Contents
 
 1. [The Process](#the-process)
+    1. [Process Overview](#process-overview)
+    1. [Definitions](#definitions)
+    1. [Workflow Model](#workflow-model)
 1. [Application Structure](#application-structure)
     1. [Public Page](#public-page)
     1. [Management Page](#management-page)
@@ -54,7 +57,7 @@ In context of Event:
 
 [**[back-to-top](#table-of-contents)**]
 
-### Conceptual Workflow Model
+### Workflow Model
 
 Phases:
  * Initialization
@@ -132,7 +135,7 @@ Phases:
 
 ### Pricing
 
-Sales stages: EarlyBird, Normal, Late, OnSite
+Sales stages: EarlyBird, Normal, Late, OnSite/NightOwl
 
 ```
  Costs = Venue costs + Materials costs + Travel Costs
