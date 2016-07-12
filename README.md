@@ -61,7 +61,6 @@ In context of Event:
 - Add Invitees to the Event context
     
 #### Reveal interest
-
 - Define
 - Make a landing page (cover, targeting, modules, extras, testimonials/gallery, 
     {when,where,seats,price}.proposed, author, subscribe = subscribe.survey|surveyNotice)
@@ -96,11 +95,13 @@ In context of Event:
 - On day salesLate-2
 - On day D-2
 
-#### Event at Risk
+#### Event at Risk - Offer Discounts
 
-#### Cancel As `U` Not Achieved
+#### `U` Not Achieved - Postpone
 
-#### No vacancies
+#### `U` Not Achieved - Cancel
+
+#### No More Vacancies
 
 #### D-Day
 
