@@ -24,7 +24,27 @@ A Landing Page template for a workshop.
 
 ### Overview
 
-One may want to run a recurring 
+One may want to run a probably recurring Workshop. It might be reasonable to run a survey prior
+to any principal activities. The prospects database shall be used if any. Any respondents become
+prospects. Any involved individual may reject further communications on the promoted event as well
+as on any future events. However, any interest restores individual as a prospect.
+
+Pricing differentiation may be employed (EarlyBird, Normal, Late, OnSite/NightOwl).
+
+Promo codes can be used to boost sales. Promo codes can be published by attendees only.
+Promo code provides discount for limited/unlimited number of attendee's affiliates.
+Attendee can benefit from acquiring his/her affiliates. However, limited number of those
+earn benefit for the attendee (normally 3 only). And benefit can be used to pay for
+future events.
+
+PostEvent phase allows attendees to download materials, provide feedback.
+
+Prospects and Attendees can do general inquiries or request for refund.
+
+Attendees may obtain vouchers on cash discounts for future events.
+
+The process in general described below. Please, refer to other parts of documentation
+to learn about IT support provided.
 
 [**[back-to-top](#table-of-contents)**]
 
@@ -37,7 +57,7 @@ In global context:
  * Refugee - explicitly rejected any further communications; reset when registers to any Event
  * Speaker - speaker
  * Host - hosts events
- * Admin to a Host - administrates events
+ * Admin (to a Host) - administrates Host's events
 
 In context of Event:
  * Invitee - invited by host to visit landing page/registration
@@ -45,16 +65,28 @@ In context of Event:
  * Rejector - rejected further notices at any stage. Reasons stored
  * Registered - registered while not paid yet
  * Attendee - admittance paid
- * Pending - didn't reject but `Z` reached before individual became attendee
+ * Pending - didn't reject but `Z` reached before individual became Attendee
  * Graduate - attended event
  * Skipper - paid but didn't attend event
 
-`W` - absolute required minimum count(Attendees)
-`X` - last call threshold
-`Y` - optimal count(Attendees)
+`V` - absolute required minimum count(Attendees)
+`W` - pre-last call threshold
+`X` - optimal count(Attendees)
+`Y` - last call threshold
 `Z` - maximum count(Attendees)
 
-**Day D** - Day of Event
+**Dates/Milestones**
+ * Day `D` - Day of Event
+ * Day `S` - Day of Sales Campaign launch
+
+All date calculations consider business days. E.g. if day `D` is Tuesday then day `D-2`
+is a precedent Friday.
+
+**Sales KPI**
+ * `avg(x)` - average daily sales over last `x` days
+ * `avg(S)` - average daily sales since day `S`
+ * `avg(Normal)` - average daily sales since Normal sales phase start
+ * `avg(Late)` - average daily sales since Normal sales phase start
 
 [**[back-to-top](#table-of-contents)**]
 
@@ -72,49 +104,76 @@ Phases:
  * PostEvent - on day after day D
 
 #### Initialization
-- Define Host, Admin
-- Define re Event: topic and components, location(city), duration, 
-    {`W`, `X`, `Y`, `Z`}, external resources (web-site, page on social network)
-- Add Invitees to the Event context
+ * Define Host, Admin
+ * Define re Event: topic and components, location(city), duration,
+    { `U`, `W`, `X`, `Y`, `Z`}, external resources (web-site, page on social network)
+ * Add Invitees to the Event context
     
 #### Survey
-- Define
-- Make a landing page (cover, targeting, modules, extras, testimonials/gallery, 
+ * Define Survey questions
+ * Make a landing page (cover, targeting, modules, extras, testimonials/gallery,
     {when,where,seats,price}.proposed, author, subscribe = subscribe.survey|surveyNotice)
     - Survey: contacts (name, email, telephone, city), checkbox (would attend in my city), date options
     - Survey form pre-populated with data from cookies/browser-input-history/email-url/DB
-    - If user is Subscriber then subscribe.surveyNotice = thank you; click if you want to 
+    - If isSubscriber then subscribe.surveyNotice = thank you; click if you want to
         change anything -> subscribe.survey; share
     - On submission: Invitee => Subscriber
-- Publish on social networks / venues sites 
-- Email invitations: url+clientid, discontinueThis, discontinueAll
-- Collect Subscribers
+ * Publish on social networks / venues sites
+ * Invitee: Email invitation: url+clientid, [remindLater,] discontinueThis, discontinueAll
+ * Collect Subscribers:
     - email confirmation: thank you, on city-mismatch -> discontinueThisCity
     - notify Host
     
 #### Sales Campaign
-- Define re Event: date and time, location, prices
-- Create event notices on social networks / venues sites
-- Update Landing Page: ... refs to public events, subscribe = subscribe.register
+ * Define re Event: date and time, location, prices
+ * Create event notices on social networks / venues sites
+ * Update Landing Page: ... refs to public events, subscribe = subscribe.register
     - If isRegistered then subscribe = subscribe.registerNotice (amend, register another attendee)
-- On launch day:
-    - Invitees:: Email invitations: details, prices, url+clientid, discontinueThis, discontinueThisCity, discontinueAll
-    - Subscribers:: Email good news: details, prices, url+clientid, remindLater, discontinueThis, discontinueAll
-- On Register
-    - Invitee|Subscriber => Registered: payment instructions, contactMe, referral-code promise
+ * On Register
+    - Invitee|Subscriber => Registered: payment instructions, contactMe, [referral-code promise]
     - Other: you've been registered already
-- Collect payments
-    - Registered => Attendee: thankyou, ticket, referral-code + share
+ * Collect payments
+    - Registered => Attendee: Email pmnt confirmation: thankyou, ticket, referral-code + share
 
-KPI Milestones:
-- On `X`
-- On `Y`
-- On `Z`
+count(Attendee) Milestones:
+ * ~~On `V`:~~
+ * On `W`:
+    - Invitee|Subscribed|Registered: optimum group is nearly formed, `W/days_since_S` are sold daily, discontinueThis|All
+    - Registered: + pmnt instructions, contactMe
+ * On `X`:
+    - Invitee|Subscribed|Registered: Hurry!: group is formed, still `Z-X` seats remain, `X/days_since_S` are sold daily, discontinueThis|All
+    - Registered: + pmnt instructions, contactMe
+ * On `Y`:
+    - Invitee|Subscribed|Registered: Last call: `Z-Y` seats remain, discontinueThis|All
+    - Registered: + pmnt instructions, contactMe
+ * On `Z`:
+    - goto **#Sales-Closed**
 
 Timeline Milestones:
-- On day salesNormal-2 (two days of EarlyBird yet)
-- On day salesLate-2
-- On day D-2
+ * On day `S`:
+    - Invitee: Email invitation: details, prices, url+clientid, [remindLater,] discontinueThis, discontinueThisCity, discontinueAll
+    - Subscriber: Email good news: details, prices, url+clientid, [remindLater,] discontinueThis, discontinueAll
+ * On day `salesNormal-2` (two days of EarlyBird yet):
+    - Invitee|Subscriber: Email price: 2 days before price raise, discontinueThis|All
+    - Registered: Email price: 2 days before price raise, contactMe
+ * On day `salesLate-2`:
+    - Invitee|Subscriber: Email price: 2 days before price raise, discontinueThis|All
+    - Registered: Email price: 2 days before price raise, contactMe
+ * On day `D-5`:
+    - If count(Attendees) less than
+        - `V`:
+        - `X`:
+        - `Z`:
+ * On day `D-2`:
+    - If count(Attendees) less than
+        - `V-avg(Late)*2`: goto **#Postponement**?
+        - `X`:
+        - `Z`:
+    - Invitee|Subscriber|Registered: Last call: 2 days before price raise, [promo-code,] discontinueThis|All
+    - Registered: + [promo-code,] contactMe
+ * On day `D-1`:
+    - If count(Attendees) less than
+        - `V-avg(Late)`: goto **#Cancellation**
 
 #### Sales Boost
 
@@ -141,11 +200,14 @@ _Draft:_
 
     
 #### Appendix: Email Actions Reference
-- discontinueThis = discontinue further emails on this event
-- discontinueThisCity = as above but for a city mismatch reason 
-- discontinueAll = discontinue all similar emails 
+- discontinueThis = discontinue further emails on this event: *=>Rejector
+- discontinueThisCity = as above but for a city mismatch reason: *=>Rejector, store City
+- discontinueAll = discontinue all similar emails: *=>Rejector&Refugee
+- contactMe = personal contact request: email to confirm telephone. Request types:
+    - i've paid but still receive emails as if I wouldn't have had
+    - [want money back]
+    - other questions
 - remindLater = remind later
-    
 
 [**[back-to-top](#table-of-contents)**]
 
