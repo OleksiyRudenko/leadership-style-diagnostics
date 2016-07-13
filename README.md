@@ -42,12 +42,13 @@ In global context:
 In context of Event:
  * Invitee - invited by host to visit landing page/registration
  * Subscriber - subscribed for event launch notice
+ * Rejector - rejected further notices at any stage. Reasons stored
  * Registered - registered while not paid yet
  * Attendee - admittance paid
- * Graduate - attended event
- * Rejector - rejected further notices at any stage. Reasons stored
  * Pending - didn't reject but `Z` reached before individual became attendee
- 
+ * Graduate - attended event
+ * Skipper - paid but didn't attend event
+
 `W` - absolute required minimum count(Attendees)
 `X` - last call threshhold
 `Y` - optimal count(Attendees)
