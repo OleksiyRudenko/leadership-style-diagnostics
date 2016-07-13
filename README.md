@@ -50,7 +50,7 @@ In context of Event:
  * Skipper - paid but didn't attend event
 
 `W` - absolute required minimum count(Attendees)
-`X` - last call threshhold
+`X` - last call threshold
 `Y` - optimal count(Attendees)
 `Z` - maximum count(Attendees)
 
@@ -105,9 +105,13 @@ Phases:
     - Other: you've been registered already
 - Collect payments
     - Registered => Attendee: thankyou, ticket, referral-code + share
+
+KPI Milestones:
 - On `X`
 - On `Y`
 - On `Z`
+
+Timeline Milestones:
 - On day salesNormal-2 (two days of EarlyBird yet)
 - On day salesLate-2
 - On day D-2
