@@ -122,6 +122,17 @@ Phases:
 #### D-Day
 
 #### PostEvent
+- Attendee => Graduate|Skipper
+- Graduate : thankyou, downloads
+- Skipper : itsapity, voucher-as-a-compensation
+
+_Draft:_
+- downloads
+- testaments
+- pictures
+- survey on further topics
+- feedback survey (initialize from hardcopies as well)
+- feedback summary => testaments
 
     
 #### Appendix: Email Actions Reference
