@@ -314,7 +314,7 @@ Sections:
 Provides access to back-end: analysis, actions.
 
 Sections:
- * Event, phase
+ * Event
  * `V`, `W`, `X`, `Y`, `Z`
  * Date milestones
  * Stats & prognosis daily graph:
@@ -324,8 +324,17 @@ Sections:
     - prognosis on
  * Pricing
  * Income analysis & prognosis
- * Actions
+ * Event phase
+ * Actions:
+    - ?
+    - ?
  * Individuals listings
+    (filter&|orderBy: individuals not involved yet, Invitees|Subscribers|...; name; e-mail; telNr)
+    - Per entry actions:
+        - ?
+        - Reconcile payments
+    - List actions:
+        - send email
 
 [**[back-to-top](#table-of-contents)**]
 
