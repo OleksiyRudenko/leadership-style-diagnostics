@@ -81,7 +81,7 @@ All date calculations consider business days. E.g. if day `D` is Tuesday then da
 is a precedent Friday.
 
 **Sales KPI**
- * `avg(x)` - average daily sales over last `x` days
+ * `avg(-x)` - average daily sales over last `x` days
  * `avg(S)` - average daily sales since day `S`
  * `avg(Normal)` - average daily sales since Normal sales phase start
  * `avg(Late)` - average daily sales since Normal sales phase start
@@ -165,25 +165,25 @@ Timeline Milestones:
     - Registered: Email price: 2 days before price raise, contactMe
  * On day `D-5`:
     - If count(Attendees) less than
-        - `V-avg(7)*5`:
+        - `V-avg(-7)*5`:
             - Attendee: invite friends, get voucher, promo-code
             - Registered: pay and get voucher
             - Subscriber: register to get special offer -> pay and get voucher
-        - `X-avg(7)*5`: _possibly sales boost techniques_
-        - `Z-avg(7)*5`: _possibly sales boost techniques_
+        - `X-avg(-7)*5`: _possibly sales boost techniques_
+        - `Z-avg(-7)*5`: _possibly sales boost techniques_
  * On day `D-2`:
     - If count(Attendees) less than
-        - `V-avg(7)*7`: goto **#Cancellation**
-        - `V-avg(7)*2`: invoke **#Postponement**; retry end-of-day
-        - `X-avg(3)*2`: _possibly sales boost techniques_
-        - `Z-avg(3)*2`: _possibly sales boost techniques_
+        - `V-avg(-7)*7`: goto **#Cancellation**
+        - `V-avg(-7)*2`: invoke **#Postponement**; retry end-of-day
+        - `X-avg(-3)*2`: _possibly sales boost techniques_
+        - `Z-avg(-3)*2`: _possibly sales boost techniques_
     - Invitee|Subscriber|Registered: Last call: 2 days before price raise, discontinueThis|All
     - Registered: + contactMe
  * On day `D-1`:
     - If count(Attendees) less than
-        - `V-avg(3)`: goto **#Cancellation**
-        - `X-avg(3)`: _possibly sales boost techniques_
-        - `Z-avg(3)`: _possibly sales boost techniques_
+        - `V-avg(-3)`: goto **#Cancellation**
+        - `X-avg(-3)`: _possibly sales boost techniques_
+        - `Z-avg(-3)`: _possibly sales boost techniques_
     - If count(Attendees) > `V`: reminder
 
 #### Postponement
@@ -312,6 +312,20 @@ Sections:
 ### Management Page
 
 Provides access to back-end: analysis, actions.
+
+Sections:
+ * Event, phase
+ * `V`, `W`, `X`, `Y`, `Z`
+ * Date milestones
+ * Stats & prognosis daily graph:
+    - per individual.Type: in, type transition, balance;
+    - sales averages: avg(S); avg(-7); avg(-5); avg(-2); avg(-1); avg(Normal); avg(Late)
+    - count() prognosis
+    - prognosis on
+ * Pricing
+ * Income analysis & prognosis
+ * Actions
+ * Individuals listings
 
 [**[back-to-top](#table-of-contents)**]
 
