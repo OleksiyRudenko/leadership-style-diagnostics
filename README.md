@@ -311,7 +311,12 @@ Sections:
 
 [**[back-to-top](#table-of-contents)**]
 
-### Management Page
+### Global Management Page
+ * Events: add, suspend, assign Host, [re]assign Admin
+ * Venue
+ * Individuals: add, status, assign to a Host (allow them as Invitees)
+
+### Event Management Page
 
 Provides access to back-end: analysis, actions.
 
@@ -349,14 +354,37 @@ Sections:
  * language
  * telephone
  * email
+ * socialProfileFB
+ * socialProfileG+
  * isConfirmed
  * isSubscribed
  * unsubscribeToken
 
+**Users**
+ * *Individual
+ * isServiceAdmin
+ * isEventHost
+ * isEventAdmin
+ * isEventSpeaker
+
+**Speaker-Host** // shared speakers pool
+ * *Individual as EventSpeaker
+ * *Individual as EventHost
+
+**Prospect-Host** // shared Invitees pool
+ * *Individual as Prospect
+ * *Individual as EventHost
+
 **Venue**
  * name
- * address
+ * addressCity
+ * addressStreet
+ * addressFloor
  * googleMapCoordinates
+
+**Room**
+ * *Venue
+ * name
  * capacityPax
  * price[asof,duration]
 
@@ -370,6 +398,8 @@ Sections:
  * isConfirmed
  * costTotal
  * *Venue
+ * *EventHost
+ * *EventAdmin
  * capacityTotal
  * capacityLastCall -- _equals `capacityTotal*0.9` or `capacityTotal-3`_
  * attendee-ReferralsLimit
@@ -417,6 +447,12 @@ Actual minimum revenue from an attendee =
  * token
  * forAction
  * isUsed
+
+**ActionLog**
+ * *Individual
+ * dateTime
+ * *Event
+ * action
 
 [**[back-to-top](#table-of-contents)**]
 
