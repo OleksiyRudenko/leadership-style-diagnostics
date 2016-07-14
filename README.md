@@ -131,10 +131,12 @@ Phases:
     - If isRegistered then `subscribe` = `subscribe.registerNotice`
         (amend, register another attendee)
  * On Register
-    - Invitee|Subscriber => Registered: payment instructions, contactMe, [referral-code promise]
-    - Other: you've been registered already
+    - If `price.salesPhase==0` || `price.user==0`
+        - Invitee|Subscriber => Attendee: thankyou, ticket, share, url.calendarEntry
+    - Otherwise: Invitee|Subscriber => Registered: payment instructions, contactMe, [referral-code promise]
+    - Other individuals: you've been registered already
  * Collect payments
-    - Registered => Attendee: Email pmnt confirmation: thankyou, ticket, [referral-code,]
+    - Registered => Attendee: Email pmnt confirmation: thankyou, ticket,
         share, url.calendarEntry
 
 count(Attendee) Milestones:
@@ -344,6 +346,7 @@ Sections:
 
 **Individual**
  * name
+ * language
  * telephone
  * email
  * isConfirmed
@@ -355,14 +358,12 @@ Sections:
  * address
  * googleMapCoordinates
  * capacityPax
- * price1h
- * price3h
- * price6h
- * price8h
- * datePriceAsOf
+ * price[asof,duration]
 
 **Event**
  * title
+ * baseUrl
+ * languages
  * dateOn
  * timeStart
  * duration
