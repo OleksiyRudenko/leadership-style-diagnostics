@@ -98,7 +98,8 @@ Phases:
  * Sales Campaign
  * Sales Boost - invoked when sales progress is poor
  * Postponement - invoked when sales target achievable but more time required
- * Cancellation - invoked when sales target obviously cannot be achieved in reasonable time scope
+ * Cancellation - invoked when sales target obviously cannot be achieved in reasonable
+    time scope
  * Sales Closed - invoked when sales target achieved before day D
  * D-Day - on day D
  * PostEvent - on day after day D
@@ -112,11 +113,12 @@ Phases:
 #### Survey
  * Define Survey questions
  * Make a landing page (cover, targeting, modules, extras, testimonials/gallery,
-    {when,where,seats,price}.proposed, author, subscribe = subscribe.survey|surveyNotice)
-    - Survey: contacts (name, email, telephone, city), checkbox (would attend in my city), date options
+    {when,where,seats,price}.proposed, author, `subscribe` = `subscribe.survey|surveyNotice`)
+    - Survey: contacts (name, email, telephone, city), checkbox (would attend in my city),
+        date options
     - Survey form pre-populated with data from cookies/browser-input-history/email-url/DB
-    - If isSubscriber then subscribe.surveyNotice = thank you; click if you want to
-        change anything -> subscribe.survey; share
+    - If isSubscriber then `subscribe.surveyNotice` = thank you; click if you want to
+        change anything -> `subscribe.survey`; share
     - On submission: Invitee => Subscriber
  * Publish on social networks / venues sites
  * Invitee: Email invitation: url+clientid, [remindLater,] discontinueThis, discontinueAll
@@ -127,21 +129,25 @@ Phases:
 #### Sales Campaign
  * Define re Event: date and time, location, prices
  * Create event notices on social networks / venues sites
- * Update Landing Page: ... refs to public events, subscribe = subscribe.register
-    - If isRegistered then subscribe = subscribe.registerNotice (amend, register another attendee)
+ * Update Landing Page: ... refs to public events, `subscribe` = `subscribe.register`
+    - If isRegistered then `subscribe` = `subscribe.registerNotice`
+        (amend, register another attendee)
  * On Register
     - Invitee|Subscriber => Registered: payment instructions, contactMe, [referral-code promise]
     - Other: you've been registered already
  * Collect payments
-    - Registered => Attendee: Email pmnt confirmation: thankyou, ticket, referral-code + share
+    - Registered => Attendee: Email pmnt confirmation: thankyou, ticket, [referral-code,]
+        share, url.calendarEntry
 
 count(Attendee) Milestones:
  * ~~On `V`:~~
  * On `W`:
-    - Invitee|Subscribed|Registered: optimum group is nearly formed, `W/days_since_S` are sold daily, discontinueThis|All
+    - Invitee|Subscribed|Registered: optimum group is nearly formed, `W/days_since_S`
+        are sold daily, discontinueThis|All
     - Registered: + pmnt instructions, contactMe
  * On `X`:
-    - Invitee|Subscribed|Registered: Hurry!: group is formed, still `Z-X` seats remain, `X/days_since_S` are sold daily, discontinueThis|All
+    - Invitee|Subscribed|Registered: Hurry!: group is formed, still `Z-X` seats remain,
+        `X/days_since_S` are sold daily, discontinueThis|All
     - Registered: + pmnt instructions, contactMe
  * On `Y`:
     - Invitee|Subscribed|Registered: Last call: `Z-Y` seats remain, discontinueThis|All
@@ -161,44 +167,86 @@ Timeline Milestones:
     - Registered: Email price: 2 days before price raise, contactMe
  * On day `D-5`:
     - If count(Attendees) less than
-        - `V`:
-        - `X`:
-        - `Z`:
+        - `V-avg(7)*5`:
+            - Attendee: invite friends, get voucher, promo-code
+            - Registered: pay and get voucher
+            - Subscriber: register to get special offer -> pay and get voucher
+        - `X-avg(7)*5`: _possibly sales boost techniques_
+        - `Z-avg(7)*5`: _possibly sales boost techniques_
  * On day `D-2`:
     - If count(Attendees) less than
-        - `V-avg(Late)*2`: goto **#Postponement**?
-        - `X`:
-        - `Z`:
-    - Invitee|Subscriber|Registered: Last call: 2 days before price raise, [promo-code,] discontinueThis|All
-    - Registered: + [promo-code,] contactMe
+        - `V-avg(7)*7`: goto **#Cancellation**
+        - `V-avg(7)*2`: invoke **#Postponement**; retry end-of-day
+        - `X-avg(3)*2`: _possibly sales boost techniques_
+        - `Z-avg(3)*2`: _possibly sales boost techniques_
+    - Invitee|Subscriber|Registered: Last call: 2 days before price raise, discontinueThis|All
+    - Registered: + contactMe
  * On day `D-1`:
     - If count(Attendees) less than
-        - `V-avg(Late)`: goto **#Cancellation**
-
-#### Sales Boost
+        - `V-avg(3)`: goto **#Cancellation**
+        - `X-avg(3)`: _possibly sales boost techniques_
+        - `Z-avg(3)`: _possibly sales boost techniques_
+    - If count(Attendees) > `V`: reminder
 
 #### Postponement
 
+If there is resource among Subscribed|Registered to achieve targets:
+ * Registered:
+    - we have count(Attendees); still `V-count(Attendees)` seats vacant; unlikely that we make
+      it till Day D; but if you make a decision right now, you could save the Event;
+      we grant you a discount to make it easier for you to decide + promo-code for your friends
+      (extra per-friend vouchers) who will get discounts and you earn extra voucher;
+    - please, decide: pay or url.discontinueThis
+ * Subscribed:
+    - _same as above_ but also url.getRegistered
+
+If no resource among Registered to achieve targets:
+ * Web-site:
+    - update date, add 'POSTPONED' banner
+    - If isAttendee: url-contactMe for refund if you wish
+ * Subscriber|Registered: there still `n` attendees required to run the Event
+    (currently we have ...); trend shows we need extra `m` days to get those;
+     therefore we have to postpone 1 week; if you're OK with that and really want to
+     participate, please, register and pay
+ * Attendee: + refund instruction, voucher option + discount
+
 #### Cancellation
+ * Web-site:
+    - `buttonAction` = Keep Updated
+    - `subscribe` = `subscribe.keepUpdated`
+ * Subscriber|Registered: unfortunately, we have to cancel; if you still interested in the topic
+    then url+clientid
+ * Attendee: + refund instruction, voucher option + discount
+ **FINAL STATE**
 
 #### Sales Closed
+ * Web-site:
+    - add banner 'WE ARE COMPLETE for this time'
+    - `buttonAction` = is!Attendee: Keep Updated
+    - `subscribe` = `subscribe.keepUpdated`
+ * Invitee|Subscribed|Registered: we are complete, we'll keep you posted
+ * Registered: + please, do not pay; if you've already done but haven't received
+    confirmation yet, please, url.contactMe
+ * Attendee: we are complete!; looking forward to seeing you
 
 #### D-Day
+ * Web-site:
+    - add banner 'WE ARE COMPLETE for this time'
+    - `buttonAction` = is!Attendee: Keep Updated
+    - `subscribe` = `subscribe.keepUpdated`
+ * Attendee: looking forward to seeing you today
 
 #### PostEvent
-- Attendee => Graduate|Skipper
-- Graduate : thankyou, downloads
-- Skipper : itsapity, voucher-as-a-compensation
+ * Web-site:
+    - downloads
+    - feedback summary => testaments
+    - pictures
+    - `survey` = `survey.furtherTopics` + `survey.feedback`
+ * Attendee => Graduate|Skipper
+ * Graduate : thankyou, url.downloads@clientId
+ * Skipper : itsapity, voucher-as-a-compensation
+ * Others : see how it's been : url.#Testaments
 
-_Draft:_
-- downloads
-- testaments
-- pictures
-- survey on further topics
-- feedback survey (initialize from hardcopies as well)
-- feedback summary => testaments
-
-    
 #### Appendix: Email Actions Reference
 - discontinueThis = discontinue further emails on this event: *=>Rejector
 - discontinueThisCity = as above but for a city mismatch reason: *=>Rejector, store City
