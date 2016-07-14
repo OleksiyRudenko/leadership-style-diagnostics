@@ -1,8 +1,6 @@
 `[2016-08-07] - created`
 
-# Workshop Landing Page
-
-A Landing Page template for a workshop.
+# Workshop Process and App
 
 ## Table of Contents
 
